@@ -1,0 +1,36 @@
+baseline -> 54%
+
+- 1. cropping 실시
+ -> 태명이형이 kernel cropping study
+
+- 2. Xception Model 사용.
+ -> 기존 baseline은 resNet 모델 사용을 했음
+
+1. pretrained Model 
+InceptionV3
+ResNet50
+VGG16
+VGG19
+Xception
+-> 어떤 모델인지 간략하게 정리
+
+2. Xception 모델을 돌리는 구조를 잡는다.
+
+3. hyper parameter tuning
+- overfitting 발생 하는 경우,
+dropout 기법.
+augmentation(증식)
+- 어떻게 증식을 할 것인가, 어떻게 하면 좋은 것인가?  
+- 정리를 하고, 코딩을 setting
+regularization L1, L2
+fine tuning
+validation
+iterated K-fold cross-validation
+
+
+4. 기존에 올라와있는 kernel
+Xception Model in Keras for Car Classification
+[3rd ML Month] Car Image Cropping - updated 7.10
+
+
+
