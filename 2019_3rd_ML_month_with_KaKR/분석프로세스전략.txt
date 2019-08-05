@@ -1,0 +1,51 @@
+1. 문제 정의와 데이터셋 수집.
+
+196개의 차종 분류. (다중 분류)
+dataset : 차종에 대한 이미지.
+
+train dataset 개수 : 9990
+test  dataset 개수 : 6150
+-> 많은 데이터는 아니지만 분류 문제를 해결하기에는 충분.
+
+
+### 1. EDA 수행
+
+## 직접 이미지를 좀 보기.
+
+
+정면, 옆면(왼쪽, 오른쪽 대각선, 완전 옆면), 후면도 있음. 
+
+직관적으로 차를 분류할 때 주로 어떤 것을 보고 확인할 수 있는가?
+	-> 브랜드 마크
+	-> 차의 크기..? 
+	-> 
+
+
+
+
+
+
+
+### 2. 기본 이미지에 Cropping 적용 
+
+### 3. cross validation 수행
+셔플링(shuffling)을 사용한 반복 K-겹 교차 검증(iterated K-fold corss-validation)
+    
+### 4. Model 설정
+* 어떤 모델이 적합한가? : Xception Model
+* layer와 Node 개수는 몇개로 할 것인가?
+    
+    
+### 5. 결과 확인
+overfitting은 발생하지 않았는가?  
+* hyper parameter tuning.  
+* dropout  
+* stride.  
+* fine tuning.  
+* weight regularization  
+ 
+* 주의사항
+hyper parameter tuning이 끝나면, cross validation set으로 다시 한 번 학습이 필요.  
+결측 값이 있을 경우, 0이 의미있는 값이 아니라면, 0으로 변경 가능  
+train dataset에서는 결측 값이 없고, test dataset에서는 결측 값이 존재한다면, 강제로 결측 값을 만들어야함.  
+검증 데이터는 절대 증식되어서는 안됨  

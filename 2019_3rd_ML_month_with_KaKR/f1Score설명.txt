@@ -1,0 +1,12 @@
+f1 Score
+Information retrieval system의 Accuracy를 측정하기 위해 주로 사용
+p = precision : 정밀도
+r  = recall      : 재현율  
+
+F1=2*p*r/ p+r  where  p = tp / tp+fp,  r=tp / tp+fn
+
+tp : true positive  : 정상을 정상이라고 맞춘 개수
+tn : true negative : 불량을 불량이라고 맞춘 개수  
+fp : false positive : 불량을 정상이라고 잘못 맞춘 개수
+fn : false negative : 정상을 불량이라고 잘못 맞춘 개수
+
