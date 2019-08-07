@@ -1,0 +1,99 @@
+2019년 8월 3일
+서현토즈까페 14:30 ~ 17:30
+캐글과 친해지기.
+김태진님
+
+** kaggle Tip
+전화번호를 정확하게 작성해야함.
+보통 케글을 진행할 때 데이터 사용에 대한 서약을 작성하는데,
+전화번호로 서약하는듯.
+
+www.kaggle.com 으로 접속하면, newspeed 화면으로 바로 가게되는데,
+렉이 심하게 걸림.
+해당 site으로 접속하는게 고수!
+www.kaggle.com/competitions.
+
+크게 competition, Kernel, Discussion 3 part가 존재
+competition : 메달을 따아함. 제일 어렵. 상금이 없는 컴페티션 같은 경우는 rank가 오르지 않음.
+Kernel        : 커널을 잘 작성하여 open하고, Vote를 많이 받아야 함. 
+Discussion   : 해당 컴페티션에 대한 댓글, 질문 등을 잘 올리면 rank 상승.
+
+competition에서 tag들을 확인해보면 주제들이 보임
+(ex) image classification, etc.. 이런 테그 등을 이용하면, 과거 컴페티션을 확인하면서
+공부도 할 수 있고.. 굉장히 좋음.
+
+Open image는 데이터가 엄청나게 많은 것들.
+보통 참가 Team이 굉장히 적은 경우, 데이터 크기가 너무 커서 발생하는 문제라고 생각하면 됨.
+
+dataset에도 커널을 확인할 수 있음.
+내가 원하는 dataset을 찾고, 이에 대한 kernel이 있는지 확인해보면 좋을듯.
+
+Kaggle kernel 같은 경우는 disk가 굉장히 작아서 정말 잘 죽음.
+따라서 요새 kaggle 트렌드는 다른데서 모델을 학습하고, weights만 가지고 kernel에 들여오는게 많음.
+
+Draft saved 가 안뜨면 저장 안된 것임.
+일반적으로, Kaggle kernel은 GPU 보다 CPU  자원이 조금 더 좋음
+
+보통 dataset을 가지고 오면,
+경로가 변경될 수도 있음. 따라서 이를 확인해야 함!
+
+컴페티션 중에 인터넷이 금지되어 있는 컴페티션도 있음.
+따라서 internet을 사용할 때는 항상 조심해야 할 필요성 있음.
+
+**  kernel Key 정리(태진님 kernel 참고)
+커맨드 모드와  에디터 모드가 존재.
+커맨드 모드는 커서가 사라진 상태라고 생각하면 됨
+에디터 모드는 커서가 깜빡이는 상태.
+
+1. Cell 생성하기
+셀 위에 셀 생성 : Command Mode + A
+셀 아래 셀 생성 : Command Mode + B
+
+2. Cell 형식 변경
+Code 셀로 변경         : Command Mode + Y
+Markdown 셀로 변경  : Command Mode + M
+
+3. Cell 삭제
+Command Mode + D D 
+
+4. Cell 복사, 붙여넣기, 잘라내기, 선택
+셀 복사       : Command Mode + C 
+셀 잘라내기 : Command Mode + X
+셀 붙여넣기 : Command Mode + V
+셀 복수 선택 : Command Mode + Shift + 위아래 화살표
+
+5. Cell 병합, 분리
+Cell 병합 : Command Mode + Shift + M
+Cell 분리 : Command Mode + Shift + -(-기호)
+
+6. Cell 라인 넘버 노출
+Command Mode + L
+
+7. 찾기
+Command Mode + F
+
+
+** Restart Session
+최대 9시간 동안 돌릴 수 있음. 따라서 9시간 넘게 돌리는 경우인지 잘 생각해야 함.
+갑자기 셀이 안보일 때, 오른쪽 상단 화살표 클릭했다가 다시 복구 시키면 모든 셀이 보임!
+
+** Code Tip
+커널 내에서 output을 생성 할 때,
+pd.to_csv("submission.csv", index = False) # index는 False로 ! 
+
+항상 생각해야할 것은 9시간안에 다 만들수 있는가를 생각!
+한 계정 당 여러개의 kernel을 만들 수 있다. 따라서 hyper parameter 튜닝 등, 여러 조건에서
+모델을 돌려야 하는 경우엔, kernel을 최대 10개까지 만들고 이에 따른 조건 별로 돌리면 됨.
+
+케라스에서는 pretrained Model에 맞는(논문에 표기된) preprocessing_output function을 
+이용해 자동으로 만들어줌.
+
+최대 동시 사용 커널 수 
+CPU 커널 10개
+GPU 커널 4개
+한번에 여러개의 kernel을 돌릴 수 있음.
+
+
+
+
+

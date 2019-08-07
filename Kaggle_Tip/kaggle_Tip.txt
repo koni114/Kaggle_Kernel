@@ -1,0 +1,5 @@
+< Kaggle Tip! >
+workspace 안에 폴더를 만드는 방법!
+python code ( ex) os.mkdir..등) 을 이용해서 만드려고 하면 안만들어짐.
+오른쪽 상단에 Add Dataset을 클릭하고 upload 버튼을 클릭해 load를 하고 난 뒤 title명을 입력하게 되는데
+이 때 title명이 folder 명으로 해서 생성 되는 듯하다. 
