@@ -1,0 +1,15 @@
+# MixUp 기법이란,
+
+mixup generator 
+- mixup 알고리즘..
+
+image augmentation 방법 중 하나.
+쉽게 말하면, Mix-up은 (x1, y1) 과 (x2, y2)를 (a, 1-a)로 섞어서
+prediction을 하게 하는 simple한 알고리즘.
+
+X = lambda * X1 + (1 - lambda) * X2
+y = lambda * y1 + (1 - lambda) * y2
+
+람다는 Beta 분포기반 이고 alpha는 하이퍼파라미터.
+
+* MixupGenerator
